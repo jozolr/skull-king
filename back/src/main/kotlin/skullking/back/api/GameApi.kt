@@ -6,6 +6,7 @@ import skullking.back.domain.GameRepository
 import skullking.back.domain.command.CreateGame
 
 @RestController
+@CrossOrigin("*")
 class GameApi(val gameRepository: GameRepository, val createGame: CreateGame) {
 
     @GetMapping("/games")
