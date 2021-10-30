@@ -1,6 +1,8 @@
 package skullking.back.infra
 
 import org.springframework.data.redis.core.RedisHash
+import org.springframework.data.repository.CrudRepository
+import org.springframework.stereotype.Repository
 import java.io.Serializable
 import java.time.LocalDateTime
 
@@ -12,3 +14,6 @@ class GameModel(
     val id: String
     ) : Serializable {
 }
+
+@Repository
+interface GameModelRedis : CrudRepository<GameModel, String>
